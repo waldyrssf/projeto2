@@ -77,8 +77,9 @@ const button1 = {
       },
       text: {
         fontSize: 20,
-      fontFamily: 'Gill Sans',
-      textAlign: 'justify',
+        fontFamily: 'fantasy',
+        textAlign: 'center',
+        justifyContent:'center',
     
       }
       
@@ -115,21 +116,21 @@ const button1 = {
         
       
 
-export default function Inicial({ navigation }) {
+export default function InicialCli({ navigation }) {
   return (
     <View style={style.container}>
-      <ImageBackground resizeMode="cover" source={require("../assets/gradient.png")} style={style.image2} />
+      <ImageBackground resizeMode="cover" source={require("../assets/gradient2.png")} style={style.image2} />
     <View style={{ position: 'absolute',flex:1, alignItems: "center", justifyContent: "center", margin: 20} }>
         <View style={[Vbutton.container, Vbutton.shadowProp]}>
-        <Text style={Vbutton.text}>Bem-vind@, por favor informe seu tipo de conta.</Text>
+        <Text style={Vbutton.text}>Médico, escolha entre Logar ou Cadastrar-se.</Text>
         <div>
         <Image source={require("../assets/farmacia.png")} style={style.image} />
       </div>
           <ThemeProvider theme={button1}>
-            <Button onPress={() => navigation.navigate("Login")} title="Login" />
+            <Button onPress={() => navigation.navigate("LoginMedico")} title="Login" />
           </ThemeProvider>
           <ThemeProvider theme={button2}>
-            <Button title="Cadastro" type="solid" onPress={()=>navigation.navigate('CadastroCliente')}/>
+            <Button title="Cadastro" type="solid" onPress={()=>navigation.navigate('CadastroMedico')}/>
           </ThemeProvider>
         </View>
         
