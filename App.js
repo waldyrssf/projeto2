@@ -2,6 +2,8 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Inicial from './screens/Inicial';
+import InicialCli from './screens/InicialCli';
+import InicialMed from './screens/InicialMed'
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
 import LoginCliente from './screens/LoginCliente';
@@ -17,6 +19,8 @@ return (
 <NavigationContainer >
 <Stack.Navigator >
 <Stack.Screen name="Inicial" component={Inicial}/>
+<Stack.Screen name="InicialCli" component={InicialCli}/>
+<Stack.Screen name="InicialMed" component={InicialMed}/>
 <Stack.Screen name="Login" component={Login} />
 <Stack.Screen name="LoginCliente" component={LoginCliente} />
 <Stack.Screen name="LoginMedico" component={LoginMedico} />

@@ -94,7 +94,7 @@ const button1 = {
          justifyContent:'center',
          alignItems:'center',
          width: '60%',
-         height: 128.5,
+         height: 140,
          marginLeft:40,
          marginRight:40,
          marginTop:20,
@@ -126,10 +126,10 @@ export default function Inicial({ navigation }) {
         <Image source={require("../assets/farmacia.png")} style={style.image} />
       </div>
           <ThemeProvider theme={button1}>
-            <Button onPress={() => navigation.navigate("Login")} title="Login" />
+            <Button onPress={() => navigation.navigate("InicialCli")} title="Cliente" />
           </ThemeProvider>
           <ThemeProvider theme={button2}>
-            <Button title="Cadastro" type="solid" onPress={()=>navigation.navigate('Cadastro')}/>
+            <Button title="Médico" type="solid" onPress={()=>navigation.navigate('InicialMed')}/>
           </ThemeProvider>
         </View>
         
