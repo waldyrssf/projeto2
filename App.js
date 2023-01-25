@@ -18,6 +18,11 @@ export default function App() {
 return (
 <NavigationContainer >
 <Stack.Navigator >
+<Stack.Screen name="CadastroCliente" component={CadastroCliente} />
+<Stack.Screen name="Inicial" component={Inicial}/>
+<Stack.Screen name="LoginMedico" component={LoginMedico} />
+<Stack.Screen name="LoginCliente" component={LoginCliente} />
+<Stack.Screen name="CadastroMedico" component={CadastroMedico} />
 <Stack.Screen name="LoginMedico" component={LoginMedico} />
 <Stack.Screen name="LoginCliente" component={LoginCliente} />
 <Stack.Screen name="Inicial" component={Inicial}/>
