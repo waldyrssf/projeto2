@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Button, ThemeProvider } from "react-native-elements";
-import { color } from "react-native-elements/dist/helpers";
-
 import { ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
 
@@ -77,9 +75,10 @@ const button1 = {
       },
       text: {
         fontSize: 20,
-      fontFamily: 'corbel',
-      textAlign: 'center',
-      justifyContent:'center',
+        fontFamily: 'corbel',
+        textAlign: 'center',
+        justifyContent:'center',
+    
       }
       
       }
@@ -115,21 +114,21 @@ const button1 = {
         
       
 
-export default function Inicial({ navigation }) {
+export default function PerfilMedico({ navigation }) {
   return (
     <View style={style.container}>
-      <ImageBackground resizeMode="cover" source={require("../assets/gradient.png")} style={style.image2} />
+      <ImageBackground resizeMode="cover" source={require("../assets/gradient2.png")} style={style.image2} />
     <View style={{ position: 'absolute',flex:1, alignItems: "center", justifyContent: "center", margin: 20} }>
         <View style={[Vbutton.container, Vbutton.shadowProp]}>
-        <Text style={Vbutton.text}>Bem-vind@! Por favor informe seu tipo de conta.</Text>
+        <Text style={Vbutton.text}>PERFIL MEDICO</Text>
         <div>
         <Image source={require("../assets/farmacia.png")} style={style.image} />
       </div>
           <ThemeProvider theme={button1}>
-            <Button onPress={() => navigation.navigate("InicialCli")} title="Cliente" />
+            <Button onPress={() => navigation.navigate("LoginCliente")} title="Login" />
           </ThemeProvider>
           <ThemeProvider theme={button2}>
-            <Button title="Médico" type="solid" onPress={()=>navigation.navigate('InicialMed')}/>
+            <Button title="Cadastro" type="solid" onPress={()=>navigation.navigate('CadastroCliente')}/>
           </ThemeProvider>
         </View>
         
@@ -139,5 +138,3 @@ export default function Inicial({ navigation }) {
    
   );
 }
-
-

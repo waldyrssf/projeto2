@@ -1,10 +1,47 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { Input, Button, ThemeProvider } from "react-native-elements";
-import { color } from "react-native-elements/dist/helpers";
-
+import { Button, ThemeProvider, Header, Avatar, Input} from "react-native-elements";
 import { ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
+
+export default function AlterarDados({ navigation }) {
+  return (
+    <View style={style.container}>
+      <ImageBackground
+        resizeMode="cover"
+        source={require("../assets/gradient2.png")}
+        style={style.image2}
+      />
+
+      <View>
+        <Header
+          leftComponent={{
+            text: "<",
+            style: { color: "#fff" },
+            position: "absolute",
+          }}
+          centerComponent={{ text: "ALTERAR DADOS", style: { color: "#fff" } }}
+          rightComponent={{ icon: "home", color: "#fff" }}
+        />
+      </View>
+
+      <div>
+            <Input style={Vbutton.input} placeholder="Nome" />
+            <Input style={Vbutton.input} placeholder="CPF" />
+            <Input style={Vbutton.input} placeholder="Email" />
+            <Input style={Vbutton.input} placeholder="Celular" />
+            <Input style={Vbutton.input} placeholder="Senha" />
+            <Input style={Vbutton.input} placeholder="Cartão do SUS" />
+            <Input style={Vbutton.input} placeholder="Data de Nascimento" />
+          </div>
+          <ThemeProvider theme={button2}>
+            <Button title="Alterar" type="solid" onPress={()=>navigation.navigate('PerfilCliente')}/>
+          </ThemeProvider>
+
+
+    </View>
+  );
+}
 
 const button1 = {
   Button: {
@@ -76,7 +113,7 @@ const Vbutton = {
   },
   text: {
     fontSize: 20,
-    fontFamily: "fantasy",
+    fontFamily: "corbel",
     textAlign: "center",
     justifyContent: "center",
   },
@@ -88,10 +125,11 @@ const style = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
+    position:"absolute",
     justifyContent: "center",
     alignItems: "center",
     width: "60%",
-    height: 140,
+    height: 133,
     marginLeft: 40,
     marginRight: 40,
     marginTop: 20,
@@ -108,41 +146,3 @@ const style = StyleSheet.create({
     position: "relative",
   },
 });
-
-export default function LoginCliente({ navigation }) {
-  return (
-    <View style={style.container}>
-      <ImageBackground
-        resizeMode="cover"
-        source={require("../assets/gradient2.png")}
-        style={style.image2}
-      />
-      <View
-        style={{
-          position: "absolute",
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          margin: 20,
-        }}
-      >
-        <View style={[Vbutton.container, Vbutton.shadowProp]}>
-          <Text style={Vbutton.text}>Médico, logue-se abaixo.</Text>
-          <div>
-            <Image
-              source={require("../assets/farmacia.png")}
-              style={style.image}
-            />
-          </div>
-
-          <Input placeholder="CRM" />
-          <Input placeholder="Senha" />
-
-          <ThemeProvider theme={button1}>
-            <Button title="Logar" onPress={()=>navigation.navigate('PerfilMedico')}/>
-          </ThemeProvider>
-        </View>
-      </View>
-    </View>
-  );
-}
