@@ -77,9 +77,9 @@ const button1 = {
       },
       text: {
         fontSize: 20,
-      fontFamily: 'Gill Sans',
-      textAlign: 'justify',
-    
+      fontFamily: 'corbel',
+      textAlign: 'center',
+      justifyContent:'center',
       }
       
       }
@@ -94,7 +94,7 @@ const button1 = {
          justifyContent:'center',
          alignItems:'center',
          width: '60%',
-         height: 140,
+         height: 133,
          marginLeft:40,
          marginRight:40,
          marginTop:20,
@@ -121,7 +121,7 @@ export default function Inicial({ navigation }) {
       <ImageBackground resizeMode="cover" source={require("../assets/gradient.png")} style={style.image2} />
     <View style={{ position: 'absolute',flex:1, alignItems: "center", justifyContent: "center", margin: 20} }>
         <View style={[Vbutton.container, Vbutton.shadowProp]}>
-        <Text style={Vbutton.text}>Bem-vind@, por favor informe seu tipo de conta.</Text>
+        <Text style={Vbutton.text}>Bem-vind@! Por favor informe seu tipo de conta.</Text>
         <div>
         <Image source={require("../assets/farmacia.png")} style={style.image} />
       </div>
