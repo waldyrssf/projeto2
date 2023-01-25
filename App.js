@@ -4,12 +4,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Inicial from './screens/Inicial';
 import InicialCli from './screens/InicialCli';
 import InicialMed from './screens/InicialMed'
-import Login from './screens/Login';
-import Cadastro from './screens/Cadastro';
 import LoginCliente from './screens/LoginCliente';
 import LoginMedico from './screens/LoginMedico';
 import CadastroMedico from './screens/CadastroMedico';
 import CadastroCliente from './screens/CadastroCliente';
+import PerfilCliente from './screens/PerfilCliente';
+import PerfilMedico from './screens/PerfilMedico';
+import ListaAtendimento from './screens/ListaAtend';
+import AlterarDados from './screens/AlterarDados';
 
 
 const Stack = createNativeStackNavigator();
@@ -18,7 +20,8 @@ export default function App() {
 return (
 <NavigationContainer >
 <Stack.Navigator >
-
+<Stack.Screen name="AlterarDado" component={AlterarDados}/>
+<Stack.Screen name="ListaAtend" component={ListaAtendimento}/>
 
 <Stack.Screen name="Inicial" component={Inicial}/>
 
@@ -32,8 +35,9 @@ return (
 <Stack.Screen name="CadastroCliente" component={CadastroCliente} />
 
 
-<Stack.Screen name="Login" component={Login} />
-<Stack.Screen name="Cadastro" component={Cadastro} />
+<Stack.Screen name="PerfilMedico" component={PerfilMedico} />
+<Stack.Screen name="PerfilCliente" component={PerfilCliente} />
+
 </Stack.Navigator>
 </NavigationContainer>
 );
