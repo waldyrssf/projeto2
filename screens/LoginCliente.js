@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Input, Button, ThemeProvider } from "react-native-elements";
+import { color } from "react-native-elements/dist/helpers";
+
 import { ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
 

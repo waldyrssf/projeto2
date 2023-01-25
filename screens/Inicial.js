@@ -77,7 +77,7 @@ const button1 = {
       },
       text: {
         fontSize: 20,
-      fontFamily: 'fantasy',
+      fontFamily: 'corbel',
       textAlign: 'center',
       justifyContent:'center',
       }
@@ -94,7 +94,7 @@ const button1 = {
          justifyContent:'center',
          alignItems:'center',
          width: '60%',
-         height: 140,
+         height: 133,
          marginLeft:40,
          marginRight:40,
          marginTop:20,
