@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import {
   Button,
-  ThemeProvider,
   Header,
   ListItem,
   Avatar,
@@ -14,14 +13,14 @@ const list = [
   {
     name: "Amy Farha",
     avatar_url:
-      "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-    subtitle: "Vice President",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-rKfA5hRAz7OznF1Z8flH5MjjC-J-3T4EA&usqp=CAU",
+    subtitle: "Cardiologista - USB Seattle - QUA 1/2/23 - 8h", 
   },
   {
     name: "Chris Jackson",
     avatar_url:
-      "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
-    subtitle: "Vice Chairman",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPRLSISP2uoEdGxNPVFrz02gI2KWiJ_VwNA&usqp=CAU",
+    subtitle: "Dermatologista - USB Jefferson - QUI 9/2/23 - 9h",
   },
 ];
 
@@ -36,13 +35,10 @@ export default function ListaAtendimento({ navigation }) {
 
       <View>
         <Header
-          leftComponent={{
-            text: "<",
-            style: { color: "#fff" },
-            position: "absolute",
-          }}
+          leftComponent={
+            <Button title="<" onPress={() => navigation.navigate("PerfilCliente")} />
+          }
           centerComponent={{ text: "LISTA DE MÉDICOS", style: { color: "#fff" } }}
-          rightComponent={{ icon: "home", color: "#fff" }}
         />
       </View>
 

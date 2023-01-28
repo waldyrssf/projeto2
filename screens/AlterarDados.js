@@ -15,13 +15,11 @@ export default function AlterarDados({ navigation }) {
 
       <View>
         <Header
-          leftComponent={{
-            text: "<",
-            style: { color: "#fff" },
-            position: "absolute",
-          }}
+          leftComponent={
+            <Button title="<" onPress={() => navigation.navigate("PerfilCliente")} />
+          }
           centerComponent={{ text: "ALTERAR DADOS", style: { color: "#fff" } }}
-          rightComponent={{ icon: "home", color: "#fff" }}
+          
         />
       </View>
 
@@ -146,3 +144,4 @@ const style = StyleSheet.create({
     position: "relative",
   },
 });
+
