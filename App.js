@@ -20,12 +20,10 @@ export default function App() {
 return (
 <NavigationContainer >
 <Stack.Navigator >
-
 <Stack.Screen name="PerfilCliente" component={PerfilCliente} />
-<Stack.Screen name="Inicial" component={Inicial}/>
-<Stack.Screen name="AlterarDado" component={AlterarDados}/>
 <Stack.Screen name="ListaAtend" component={ListaAtendimento}/>
-
+<Stack.Screen name="AlterarDados" component={AlterarDados}/>
+<Stack.Screen name="Inicial" component={Inicial}/>
 
 
 <Stack.Screen name="InicialMed" component={InicialMed}/>
