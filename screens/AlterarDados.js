@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { Button, ThemeProvider, Header, Avatar } from "react-native-elements";
+import { Button, ThemeProvider, Header, Avatar, Input} from "react-native-elements";
 import { ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
 
-export default function PerfilCliente({ navigation }) {
+export default function AlterarDados({ navigation }) {
   return (
     <View style={style.container}>
       <ImageBackground
@@ -12,61 +12,33 @@ export default function PerfilCliente({ navigation }) {
         source={require("../assets/gradient2.png")}
         style={style.image2}
       />
-      <View style={{
-        width: '100%',
-        position: 'absolute',
-        top: 0,
-        zindex: 99,
-        justifyContent: 'start'
-       }}>
-        <Header  
-          containerStyle={{
-          backgroundColor: 'transparent',
-          }}
-          leftComponent={{
-            text: "<",
-            style: { color: "#fff", },
-          
-          }}
-          
-          centerComponent={{ text: "MY TITLE", style: { color: "#fff" } }}
-          rightComponent={{ icon: "home", color: "#fff" }}
-        />
-      </View> 
-       
-    <View
-          style={{
-          position: "absolute",
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          margin: 40,
-        }}>
-     
-
-      <Avatar
-        rounded
-        size="xlarge"
-        source={{
-          uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-        }}
-      />
 
       <View>
-        <ThemeProvider theme={button1}>
-          <Button
-            onPress={() => navigation.navigate("")}
-            title="Lista de atendimentos"
-          />
-          <Button
-            onPress={() => navigation.navigate("")}
-            title="Alterar Dados"
-          />
-        </ThemeProvider>
+        <Header
+          leftComponent={{
+            text: "<",
+            style: { color: "#fff" },
+            position: "absolute",
+          }}
+          centerComponent={{ text: "ALTERAR DADOS", style: { color: "#fff" } }}
+          rightComponent={{ icon: "home", color: "#fff" }}
+        />
       </View>
-      
-    </View>
-    
+
+      <div>
+            <Input style={Vbutton.input} placeholder="Nome" />
+            <Input style={Vbutton.input} placeholder="CPF" />
+            <Input style={Vbutton.input} placeholder="Email" />
+            <Input style={Vbutton.input} placeholder="Celular" />
+            <Input style={Vbutton.input} placeholder="Senha" />
+            <Input style={Vbutton.input} placeholder="Cartão do SUS" />
+            <Input style={Vbutton.input} placeholder="Data de Nascimento" />
+          </div>
+          <ThemeProvider theme={button2}>
+            <Button title="Alterar" type="solid" onPress={()=>navigation.navigate('PerfilCliente')}/>
+          </ThemeProvider>
+
+
     </View>
   );
 }

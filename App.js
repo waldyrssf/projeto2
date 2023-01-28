@@ -20,10 +20,13 @@ export default function App() {
 return (
 <NavigationContainer >
 <Stack.Navigator >
+
+<Stack.Screen name="PerfilCliente" component={PerfilCliente} />
+<Stack.Screen name="Inicial" component={Inicial}/>
 <Stack.Screen name="AlterarDado" component={AlterarDados}/>
 <Stack.Screen name="ListaAtend" component={ListaAtendimento}/>
 
-<Stack.Screen name="Inicial" component={Inicial}/>
+
 
 <Stack.Screen name="InicialMed" component={InicialMed}/>
 <Stack.Screen name="InicialCli" component={InicialCli}/>
@@ -36,7 +39,7 @@ return (
 
 
 <Stack.Screen name="PerfilMedico" component={PerfilMedico} />
-<Stack.Screen name="PerfilCliente" component={PerfilCliente} />
+
 
 </Stack.Navigator>
 </NavigationContainer>
