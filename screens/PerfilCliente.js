@@ -12,61 +12,58 @@ export default function PerfilCliente({ navigation }) {
         source={require("../assets/gradient2.png")}
         style={style.image2}
       />
-      <View style={{
-        width: '100%',
-        position: 'absolute',
-        top: 0,
-        zindex: 99,
-        justifyContent: 'start'
-       }}>
-        <Header  
+      <View
+        style={{
+          width: "100%",
+          position: "absolute",
+          top: 0,
+          zindex: 99,
+          justifyContent: "start",
+        }}
+      >
+        <Header
           containerStyle={{
-          backgroundColor: 'transparent',
+            backgroundColor: "transparent",
           }}
-          leftComponent={{
-            text: "<",
-            style: { color: "#fff", },
-          
-          }}
-          
-          centerComponent={{ text: "MY TITLE", style: { color: "#fff" } }}
-          rightComponent={{ icon: "home", color: "#fff" }}
+          centerComponent={{ text: "PERFIL", style: { color: "#fff" } }}
+         
         />
-      </View> 
-       
-    <View
-          style={{
+      </View>
+
+      <View
+        style={{
           position: "absolute",
           flex: 1,
           alignItems: "center",
           justifyContent: "center",
           margin: 40,
-        }}>
-     
-
-      <Avatar
-        rounded
-        size="xlarge"
-        source={{
-          uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
         }}
-      />
+      >
+        <Avatar
+          rounded
+          size="xlarge"
+          source={{
+            uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQJBbd-ajtZI5CWaLNaEerRzeqqoP9lEPAfsAum424fdDXJS6I9uKvzYmIqRDsENB4eQ&usqp=CAU",
+          }}
+        />
 
-      <View>
-        <ThemeProvider theme={button1}>
-          <Button
-            onPress={() => navigation.navigate("")}
-            title="Lista de atendimentos"
-          />
-          <Button
-            onPress={() => navigation.navigate("")}
-            title="Alterar Dados"
-          />
-        </ThemeProvider>
+        <View>
+          <ThemeProvider theme={button1}>
+            <Button
+              onPress={() => navigation.navigate("ListaAtend")}
+              title="Lista de atendimentos"
+            />
+            <Button
+              onPress={() => navigation.navigate("AlterarDados")}
+              title="Alterar Dados"
+            />
+            <Button
+              onPress={() => navigation.navigate("LoginCliente")}
+              title="SAIR"
+            />
+          </ThemeProvider>
+        </View>
       </View>
-      
-    </View>
-    
     </View>
   );
 }
@@ -153,7 +150,7 @@ const style = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    position:"absolute",
+    position: "absolute",
     justifyContent: "center",
     alignItems: "center",
     width: "60%",
