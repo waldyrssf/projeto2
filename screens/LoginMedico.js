@@ -139,7 +139,7 @@ export default function LoginCliente({ navigation }) {
           <Input placeholder="Senha" />
 
           <ThemeProvider theme={button1}>
-            <Button title="Logar" />
+            <Button title="Logar" onPress={()=>navigation.navigate('PerfilMedico')}/>
           </ThemeProvider>
         </View>
       </View>
