@@ -1,10 +1,18 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { Button, ThemeProvider, Header, Avatar } from "react-native-elements";
+import { Button, ThemeProvider, Header,ListItem, Avatar, Input} from "react-native-elements";
 import { ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
 
-export default function PerfilCliente({ navigation }) {
+const list = [
+    {
+      name: 'Amy Farha',
+      avatar_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-rKfA5hRAz7OznF1Z8flH5MjjC-J-3T4EA&usqp=CAU',
+      subtitle: 'Cardiologista - USB Seattle - QUA 1/2/23 - 8h'
+    }
+  ]
+
+export default function Horario({ navigation }) {
   return (
     <View style={style.container}>
       <ImageBackground
@@ -12,58 +20,41 @@ export default function PerfilCliente({ navigation }) {
         source={require("../assets/gradient2.png")}
         style={style.image2}
       />
-      <View
-        style={{
-          width: "100%",
-          position: "absolute",
-          top: 0,
-          zindex: 99,
-          justifyContent: "start",
-        }}
-      >
+
+      <View>
         <Header
-          containerStyle={{
-            backgroundColor: "transparent",
-          }}
-          centerComponent={{ text: "PERFIL", style: { color: "#fff" } }}
-         
+          leftComponent={<Button title="<" onPress={() => navigation.navigate("PerfilMedico")} />}
+          centerComponent={{ text: "Adicionar Horários", style: { color: "#fff" } }}
+          
         />
       </View>
 
-      <View
-        style={{
-          position: "absolute",
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          margin: 40,
-        }}
-      >
-        <Avatar
-          rounded
-          size="xlarge"
-          source={{
-            uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQJBbd-ajtZI5CWaLNaEerRzeqqoP9lEPAfsAum424fdDXJS6I9uKvzYmIqRDsENB4eQ&usqp=CAU",
-          }}
-        />
-
-        <View>
-          <ThemeProvider theme={button1}>
-            <Button
-              onPress={() => navigation.navigate("Horario")}
-              title="Inserir Horário"
-            />
-            <Button
-              onPress={() => navigation.navigate("AlterarDadosMed")}
-              title="Alterar Dados"
-            />
-            <Button
-              onPress={() => navigation.navigate("LoginMedico")}
-              title="SAIR"
-            />
+      <div>
+            <Input placeholder="Nome" />
+            <Input placeholder="Especialidade" />
+            <Input placeholder="UBS" />
+            <Input placeholder="Data" />
+            <Input placeholder="Horário" />
+          </div>
+          <ThemeProvider theme={button2}>
+            <Button title="Adicionar" type="solid" onPress={()=>navigation.navigate('PerfilMedico')}/>
           </ThemeProvider>
-        </View>
-      </View>
+
+          <ThemeProvider theme={button2}>
+            <Button title="Excluir" type="solid" onPress={()=>navigation.navigate('PerfilMedico')}/>
+          </ThemeProvider>
+          {
+    list.map((l, i) => (
+      <ListItem key={i} bottomDivider>
+        <Avatar source={{uri: l.avatar_url}} />
+        <ListItem.Content>
+          <ListItem.Title>{l.name}</ListItem.Title>
+          <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
+        </ListItem.Content>
+      </ListItem>
+    ))
+  }
+
     </View>
   );
 }
@@ -150,7 +141,7 @@ const style = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    position: "absolute",
+    position:"absolute",
     justifyContent: "center",
     alignItems: "center",
     width: "60%",
