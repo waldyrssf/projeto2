@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { Button, ThemeProvider, Header, Avatar } from "react-native-elements";
+import { Button, ThemeProvider, Header, Avatar, Input} from "react-native-elements";
 import { ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
 
-export default function PerfilCliente({ navigation }) {
+export default function AlterarDadosMed({ navigation }) {
   return (
     <View style={style.container}>
       <ImageBackground
@@ -12,58 +12,29 @@ export default function PerfilCliente({ navigation }) {
         source={require("../assets/gradient2.png")}
         style={style.image2}
       />
-      <View
-        style={{
-          width: "100%",
-          position: "absolute",
-          top: 0,
-          zindex: 99,
-          justifyContent: "start",
-        }}
-      >
+
+      <View>
         <Header
-          containerStyle={{
-            backgroundColor: "transparent",
-          }}
-          centerComponent={{ text: "PERFIL", style: { color: "#fff" } }}
-         
+          leftComponent={<Button title="<" onPress={() => navigation.navigate("PerfilMedico")} />}
+          centerComponent={{ text: "ALTERAR DADOS", style: { color: "#fff" } }}
+          
         />
       </View>
 
-      <View
-        style={{
-          position: "absolute",
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          margin: 40,
-        }}
-      >
-        <Avatar
-          rounded
-          size="xlarge"
-          source={{
-            uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQJBbd-ajtZI5CWaLNaEerRzeqqoP9lEPAfsAum424fdDXJS6I9uKvzYmIqRDsENB4eQ&usqp=CAU",
-          }}
-        />
-
-        <View>
-          <ThemeProvider theme={button1}>
-            <Button
-              onPress={() => navigation.navigate("")}
-              title="Inserir Horário"
-            />
-            <Button
-              onPress={() => navigation.navigate("AlterarDadosMed")}
-              title="Alterar Dados"
-            />
-            <Button
-              onPress={() => navigation.navigate("LoginMedico")}
-              title="SAIR"
-            />
+      <div>
+      <Input placeholder="Nome" />
+            <Input placeholder="CRM" />
+            <Input placeholder="Email" />
+            <Input placeholder="Celular" />
+            <Input placeholder="Senha" />
+            <Input placeholder="Especialidade" />
+            <Input placeholder="Data de Nascimento" />
+          </div>
+          <ThemeProvider theme={button2}>
+            <Button title="Alterar" type="solid" onPress={()=>navigation.navigate('PerfilCliente')}/>
           </ThemeProvider>
-        </View>
-      </View>
+
+
     </View>
   );
 }
@@ -150,7 +121,7 @@ const style = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    position: "absolute",
+    position:"absolute",
     justifyContent: "center",
     alignItems: "center",
     width: "60%",
