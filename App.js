@@ -13,6 +13,7 @@ import PerfilMedico from './screens/PerfilMedico';
 import ListaAtendimento from './screens/ListaAtend';
 import AlterarDadosMed from './screens/AlterarDadosMed';
 import AlterarDadosCli from './screens/AlterarDadosCli';
+import Horario from './screens/Horario';
 
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ export default function App() {
 return (
 <NavigationContainer >
 <Stack.Navigator >
+<Stack.Screen name="Horario" component={Horario} />
 <Stack.Screen name="PerfilMedico" component={PerfilMedico} />
 <Stack.Screen name="PerfilCliente" component={PerfilCliente} />
 <Stack.Screen name="ListaAtend" component={ListaAtendimento}/>
