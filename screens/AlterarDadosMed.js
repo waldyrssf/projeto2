@@ -133,12 +133,8 @@ const style = StyleSheet.create({
   },
 
   image2: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-    alignItems: "center",
+    position: "absolute",
     width: "100%",
-    paddingVertical: 350,
-    position: "relative",
-  },
+    height: "100%",
+    },
 });
