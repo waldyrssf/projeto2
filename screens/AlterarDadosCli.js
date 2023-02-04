@@ -13,7 +13,7 @@ export default function AlterarDadosCli({ navigation }) {
         style={style.image2}
       />
 
-      <View>
+      <View >
         <Header
           leftComponent={
             <Button title="<" onPress={() => navigation.navigate("PerfilCliente")} />
@@ -121,6 +121,7 @@ const style = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
+
   },
   image: {
     position:"absolute",
@@ -135,13 +136,9 @@ const style = StyleSheet.create({
   },
 
   image2: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-    alignItems: "center",
+    position: "absolute",
     width: "100%",
-    paddingVertical: 350,
-    position: "relative",
-  },
+    height: "100%",
+    },
 });
 
