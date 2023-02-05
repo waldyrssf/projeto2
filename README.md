@@ -2,7 +2,7 @@
 
 Projeto em React Native criado por Afonso Henrique, Luana Germano e Waldyr Soares durante a disciplina de Projeto e Desenvolvimento 2
 
-Antes de instalar o projeto, faz-se necessário o download de algumas dependências do React Native e de Rotas para a perfeita visualização do projeto.
+Antes de instalar o projeto, faz-se necessário o download de algumas dependências do React Native para a perfeita visualização do projeto.
 
 1 - Instalando dependência: EXPO
 Na pasta em que o projeto foi clonado, via CMD digite: npm install -g expo-cli
