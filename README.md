@@ -1,6 +1,7 @@
-Projeto em React Native: CronoUBS
+#Projeto: CronoUBS
 
 Criadores: Afonso Henrique, Luana Germano e Waldyr Soares
+
 Disciplina: Projeto e Desenvolvimento 2
 
 CronoUBS é uma aplicação mobile para que as pessoas possam acompanhar as informações sobre a presença de médicos em Unidades Básicas de Saúde (UBS). O aplicativo fornecerá informações sobre a identificação do médico, sua especialidade, UBS, data e horário. Essas informações serão inseridas diretamente pelos médicos em seus perfis, garantindo a confiabilidade.
